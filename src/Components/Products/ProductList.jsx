@@ -84,8 +84,8 @@ function ProductList() {
     
   return ( 
     <div className='w-full'>
-        <div className='flex gap-1 w-full h-[300px] overflow-hidden'>
-            <div style={{backgroundImage: `url(${slides[curSlider].url})`}} className='w-3/5 h-full duration-500 relative bg-cover bg-center'>
+        <div className='flex gap-1 w-full h-[305px] '>
+            <div style={{backgroundImage: `url(${slides[curSlider].url})`}} className='w-3/5 h-full z-0 relative duration-500  bg-cover bg-center'>
                 <div className=' absolute text-white left-0 -translate-x-0 translate-y-[-50] top-[50%] rounded-full cursor-pointer bg-black/20'>
                     <BsChevronCompactLeft onClick={Goprev}  size={30}/>
                 </div>
@@ -93,7 +93,7 @@ function ProductList() {
                     <BsChevronCompactRight onClick={Gonext}  size={30}/>
                 </div>
             </div>
-            
+                
 
             <div className='w-2/5'>
                 <div className='flex flex-col gap-1'>
@@ -102,6 +102,7 @@ function ProductList() {
                 </div>
             </div>
         </div>
+
         <div className='mt-5'>
             <h1 className='text-2xl font-semibold'>BEST SELLER</h1>
             {/* <span className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:md:grid-cols-5 xl:grid-cols-6 gap-2  mt-5 overflow-hidden p-1'>

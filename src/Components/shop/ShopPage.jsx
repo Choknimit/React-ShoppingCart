@@ -28,7 +28,7 @@ function ShopPage() {
         <div className='flex gap-5 items-center'>
             <h1 className='text-2xl font-semibold uppercase tracking-widest'>FILTER</h1>
             <div className='p-2'>
-                <select name="" id="" className='uppercase focus:outline-none ring-gray-300 dutation-500 w-full'>
+                <select name="" id="" className='uppercase focus:outline-none ring-gray-300 dutation-500 bg-transparent'>
                     <option value="" >Beer Style (ประเภทของเบียร์)</option>
                     <option value="">Ale</option>
                     <option value="">Lager</option>
@@ -37,7 +37,7 @@ function ShopPage() {
                 </select>
             </div>
             <div className='p-2 uppercase'>
-                <select name="" id="" className='uppercase focus:outline-none ring-gray-300 dutation-500'>
+                <select name="" id="" className='uppercase focus:outline-none ring-gray-300 dutation-500 bg-transparent'>
                     <option value="" >Price (ราคา)</option>
                     <option value="">100.00 - 500.00</option>
                 </select>

@@ -28,7 +28,7 @@ function Payment() {
             <div className='flex flex-col gap-2 w-2/5'>
                 <label className='text-gray-600' htmlFor="">Bank</label>
                 <select name="back-account" id="" className='border p-2 rounded-md'>
-                    <option value="" className='text-gray-500' disabled >Choose Bank Accout</option>
+                    <option value="" className='text-gray-500'  >Choose Bank Accout</option>
                     <option value="">SCB</option>
                 </select>
             </div>

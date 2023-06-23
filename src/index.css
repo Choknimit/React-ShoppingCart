@@ -1,28 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&display=swap');
-*{
-    font-family: 'Kanit', sans-serif;
-}
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.product-list {
-    display: flex;
-    min-height: (calc(100vh - 1fr));
-    flex-wrap: wrap;
-    align-content: flex-start;
-    padding-top: auto   ;
-}
-
-.product-item {
-    width: 16.66667% !important;
-    padding: 0.3125rem;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    height: 100%;
-    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0,0,0,.1);
+    font-family: 'Kanit', sans-serif;
 }
 
 .box-shadow-prd {
     box-shadow: 0 0.0625rem 5px 0 rgba(0,0,0,.05);
+}
+
+.box-shadow-6 {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.ant-btn-primary {
+    background-color: #1677ff !important;
+}
+
+.box-sh {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.total-footer {
+    transition: background .1s cubic-bezier(.4,0,.6,1);
+}
+
+.total-footer::before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    height: 1.25rem;
+    width: 100%;
+    background: linear-gradient(transparent,rgba(0,0,0,.08));
+}
+
+.text-el {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* จำนวนบรรทัดที่ต้องการให้แสดง */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

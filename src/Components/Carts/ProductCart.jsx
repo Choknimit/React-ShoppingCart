@@ -1,8 +1,13 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { BsFilePlus, BsFileMinus } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
+import { TiShoppingCart } from 'react-icons/ti'
+
+import CartItem from './CartItem'
+import CartData from './CartData'
 
 function ProductCart({ Cart }) {
   const [number, setNumber] = useState(0)
@@ -15,10 +20,57 @@ function ProductCart({ Cart }) {
 
     }
   }
+
   return (
     <div className='flex flex-col gap-5 w-full'>
+      <div className=' flex flex-col gap-5'>
+        <div className=' py-4 rounded-sm flex items-center gap-5'>
+          <h4 className='text-2xl font-semibold tracking-wide'>ตระกร้าสินค้า</h4>
+          <TiShoppingCart className='text-2xl' />
 
-      <div className='flex justify-between items-end'>
+        </div>
+        <hr />
+        <div className='flex justify-between'>
+          <div >
+            <p>สินค้า</p>
+          </div>
+          <div className='flex items-center gap-[5rem]'>
+            <p>ราคาต่อชื้น</p>
+            <div>
+              <p>จำนวนสินค้า</p>
+            </div>
+
+            <div>
+              <p>ราคารวม</p>
+            </div>
+
+            <div>
+              <p>แอคชั่น</p>
+            </div>
+          </div>
+        </div>
+          {CartData.map((data) => {
+              {return <CartItem key={data.id} {...data}/>}
+            })}
+          <div className='sticky z-[999] bottom-0 total-footer'>
+            <div className='flex justify-end items-end gap-5 bg-[#FFFF] h-36 p-4 pb-5 box-sh relative' >
+              <div className='flex items-center gap-5'>
+                <p className='text-lg font-semibold'>สินค้ารวม(1)</p>
+                <div className='flex items-center gap-2'>
+                  <p className='text-lg font-semibold'>ยอดรวม</p>
+                  <p className='text-[24px] font-[500] text-orange-700 '>฿2450</p>
+                </div>
+
+              <div>
+                <button className='bg-blue-600 p-3 px-12 hover:bg-blue-500 transition-all durantion-500 text-sm font-normal text-white rounded-md'>สั่งซื้อสินค้า</button>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      {/* <div className='flex justify-between items-end'>
         <div className='flex  gap-5'>
           <img className='w-24 h-24 object-contain' src="https://uploads-ssl.webflow.com/5e18f76c778ad80e975f2197/640295d85361e548ed311600_nloobsixklis1p5h2w3x-p-500.jpeg" alt="" />
           <p>DDH Double Citra Daydream from Other Half</p>
@@ -26,12 +78,16 @@ function ProductCart({ Cart }) {
 
         <span className='flex'>
           <div className='flex gap-9 items-center'>
-          <p>114.00</p>
-          <div className='flex items-center gap-5'>
-            <button onClick={numberMinus} className='p-1.5 bg-gray-300 rounded-sm text-lg font-semibold border px-4'>-</button>
-            <p className='w-2'>{number}</p>
-            <button onClick={numberPlus} className='p-1.5 bg-gray-300 rounded-sm text-lg font-semibold border px-4'>+</button>
-          </div>
+            <p>$114.00</p>
+            <div className='flex items-center gap-2 border'>
+                <button onClick={numberMinus} className=' bg-transparent rounded-sm text-lg font-semibold px-3 border-r-[1px] '>-</button>
+                <p className='w-3'>{number}</p>
+                <button onClick={numberPlus} className=' bg-transparent rounded-sm text-lg font-semibold px-3 border-l-[1px] '>+</button>
+            </div>
+            <div className='flex gap-9'>
+              <p>$240</p>
+              <p>ลบ</p>
+            </div>
           </div>
         </span>
       </div>
@@ -139,7 +195,7 @@ function ProductCart({ Cart }) {
 
         </Link>
 
-      </div>
+      </div> */}
 
     </div>
   )

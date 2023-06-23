@@ -8,13 +8,13 @@ import Footer from './Footer'
 function RootlayoutBar({ children }) {
   return (
     <div className=''>
-      <div className='flex flex-col bg-[#FFFFFF]'>
+      <div className='flex flex-col bg-[#F5F5F5]'>
           <div className=''>
               <div className=''>
                   <Navibar />
               </div>
           </div>
-          <main className='flex container mx-auto '>
+          <main className='flex container mx-auto min-h-screen'>
               { children }
           </main>
 
